@@ -1,0 +1,15 @@
+{% extends 'dashboard/base.html' %}
+{% block content %}
+<div class="row" style="margin:20px;">
+    <h1>Liste Des Etudiants :</h1> <hr>
+            {% for etudiant in etudiants %}
+    <div class="card" style="width: 18rem;margin:15px;">
+  <div class="card-body">
+    <h5 class="card-title">{{etudiant.caption}}</h5>
+       <img class="card-img-top img-responsive" style="height:200px;" src="{{ etudiant.image.url}}" >
+      <p class="card-text">Master THYP <br> Université de Paris 8</p>
+  </div>
+</div>
+                {% endfor %}
+</div>
+{% endblock %}
